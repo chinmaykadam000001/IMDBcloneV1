@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDb Clone v1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>WELCOME THE MOVIE'S WORLD</h1>
+    <br><br>
+    <h2>please enter the movie name in the search bar</h2>
+    <br><br>
+    <form action="/movie" method="POST">
+        <input type="text" name="movie_name" placeholder="enter the movie name" required>
+        <button type="submit">sumbit</button>
+    </form>
+
+    <footer class="footer">
+        <p>Made by <strong>Chinmay Nilesh Kadam</strong> | <a href="https://github.com/chinmaykadam000001" target="_blank">GitHub Profile</a></p>
+    </footer>
+</body>
+</html>

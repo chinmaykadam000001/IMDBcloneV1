@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ movie }} - IMDb Clone v1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+     <h1> Here is your result </h1>
+     <br><br>
+
+     {% if poster and poster != "N/A" %}
+         <img src="{{ poster }}" alt="Movie Poster" style="max-width: 300px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+         <br><br>
+     {% endif %}
+
+      <p><strong>Title:</strong> {{movie}}</p>
+      <br>
+      <p><strong>Director:</strong> {{director}}</p>
+      <br>
+      <p><strong>Released:</strong> {{year}}</p>
+      <br>
+      <p><strong>Rating:</strong> ⭐ {{rating}} / 10</p>
+      <br>
+      <p style="max-width: 500px; line-height: 1.6; color: #b3b3b3; text-align: center;">
+          <strong>Plot:</strong> {{ plot }}
+      </p>
+      
+      <br><br>
+      <a href="/" class="back-link">← Search Another Movie</a>
+      <br><br>
+
+      <footer class="footer">
+          <p>Made by <strong>Chinmay Nilesh Kadam</strong> | <a href="https://github.com/chinmaykadam000001" target="_blank">GitHub Profile</a></p>
+      </footer>
+</body>
+</html>
